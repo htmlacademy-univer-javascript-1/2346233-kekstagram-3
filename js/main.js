@@ -1,29 +1,23 @@
-const randomNumber = function (from, to) {
+const getRandomNumber =  (from, to) => {
   if (from > to) {
-    return null;
+    throw new Error('from can not great than to');
   }
   if (from === to) {
     return to;
   }
   if (from >= 0 && to >=0) {
-  for (let i = from; i <= to, i++;) {
+    for (let i = from; i <= to, i++;) {
 
-    const random = Math.floor(Math.random() * (to - from + 1)) + from ;
+      const random = Math.floor(Math.random() * (to - from + 1)) + from ;
 
-    return random
+      return random;
+    }
   }
-}
-return null;
-}
+  throw new Error('negative number');
+};
 
-console.log(randomNumber(3,3));
+console.log(getRandomNumber(3,3));
 
-const isStringMax = function (str, maxValue) {
-  if (str.length <= maxValue ) {
-  return true
-  }
-  else {
-    return false
-  }
-}
+const isStringMax = (str, maxValue) =>  str.length <= maxValue;
+
 console.log(isStringMax('как дела', 10));
