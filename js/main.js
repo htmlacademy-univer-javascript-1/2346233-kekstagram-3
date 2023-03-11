@@ -16,8 +16,8 @@ const getRandomNumber =  (from, to) => {
   throw new Error('negative number');
 };
 
-console.log(getRandomNumber(3,3));
+getRandomNumber(3,3);
 
 const isStringMax = (str, maxValue) =>  str.length <= maxValue;
 
-console.log(isStringMax('как дела', 10));
+isStringMax('как дела', 10);
