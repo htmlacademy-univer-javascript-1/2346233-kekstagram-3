@@ -20,6 +20,7 @@ const getRandomNumber =  (from, to) => {
 };
 
 getRandomNumber(0,3);
+
 const isStringMax = (str, maxValue) =>  str.length <= maxValue;
 
 isStringMax('как дела', 10);
