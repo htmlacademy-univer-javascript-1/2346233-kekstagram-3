@@ -1,8 +1,4 @@
-
-import { getRandomNumber,isStringMax,getPhotos} from './util.js';
-import {MAX_PHOTOS} from './data.js';
-getRandomNumber(0,3);
-isStringMax('HEllo',3);
+import { MAX_PHOTOS,descriptions } from './data.js';
 
 const getRandomNumber =  (from, to) => {
   if (from > to) {
@@ -25,15 +21,8 @@ const getRandomNumber =  (from, to) => {
   }
 };
 
-getRandomNumber(0,3);
 
 const isStringMax = (str, maxValue) =>  str.length <= maxValue;
-
-isStringMax('как дела', 10);
-
-const MAX_PHOTOS = 25;
-
-const descriptions = ['зимнее утро', 'утро в саду', 'морской бриз', 'завтрак', 'Ночная тьма'];
 
 const getPhotos = () => ({
   id: getRandomNumber(1,MAX_PHOTOS),
@@ -43,6 +32,4 @@ const getPhotos = () => ({
   comments: getRandomNumber(0,200),
 });
 
-
-// eslint-disable-next-line no-unused-vars
-const massiveOfPhotos = Array.from({length:MAX_PHOTOS}, getPhotos);
+export {getRandomNumber, isStringMax, getPhotos};
