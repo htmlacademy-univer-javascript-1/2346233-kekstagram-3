@@ -23,3 +23,18 @@ getRandomNumber(0,3);
 const isStringMax = (str, maxValue) =>  str.length <= maxValue;
 
 isStringMax('как дела', 10);
+
+const MAX_PHOTOS = 25;
+
+const descriptions = ['зимнее утро', 'утро в саду', 'морской бриз', 'завтрак', 'Ночная тьма'];
+
+const getPhotos = () => ({
+  id: getRandomNumber(1,MAX_PHOTOS),
+  url: `photos/${getRandomNumber(1,MAX_PHOTOS)}.jpg`,
+  description: descriptions[getRandomNumber(0,4)],
+  likes: getRandomNumber(15,200),
+  comments: getRandomNumber(0,200),
+});
+
+// eslint-disable-next-line no-unused-vars
+const massiveOfPhotos = Array.from({length:MAX_PHOTOS}, getPhotos);
