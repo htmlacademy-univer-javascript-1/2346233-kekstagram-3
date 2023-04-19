@@ -33,3 +33,5 @@ const getPhotos = () => ({
 });
 
 export {getRandomNumber, isStringMax, getPhotos};
+
+
