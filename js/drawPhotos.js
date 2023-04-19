@@ -4,12 +4,6 @@ const pictures = document.querySelector('.pictures');
 const fragment = document.createDocumentFragment();
 
 
-
-const pictureTemplate = document.querySelector('#picture');
-const pictures = document.querySelector('.pictures');
-const fragment = new DocumentFragment();
-
-
 export const  insertPhotoMiniature = (photos) => {
   photos.forEach((photo) => {
     const template = pictureTemplate.cloneNode(true);
