@@ -4,3 +4,5 @@ getRandomNumber(0,3);
 isStringMax('HEllo',3);
 // eslint-disable-next-line no-unused-vars
 const massiveOfPhotos = Array.from({length:MAX_PHOTOS}, getPhotos);
+
+//Задание 7 часть 2
