@@ -34,4 +34,5 @@ const getPhotos = () => ({
 
 export {getRandomNumber, isStringMax, getPhotos};
 
+export const isEscapeKey = (evt) => evt.key === 'Escape';
 
