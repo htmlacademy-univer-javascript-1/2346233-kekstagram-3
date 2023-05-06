@@ -18,7 +18,6 @@ function openUploadSuccess(){
 
 function closeUploadError() {
   errorMessageElement.classList.add('hidden');
-  //document.querySelector('.img-upload__overlay').classList.remove('hidden');
   document.body.classList.add('modal-open');
 }
 
