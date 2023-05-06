@@ -1,8 +1,12 @@
 
-import { generatePhotos } from './data.js';
+import { getPhotos } from './data.js';
 import { insertPhotoMiniature } from './drawPhotos.js';
-import './formValidator.js';
+import { showDownloadAlert } from './alert.js';
 import './form.js';
-import './size.js';
+import './formValidator.js';
 import './effects.js';
-insertPhotoMiniature(generatePhotos(25));
+import './size.js';
+
+
+getPhotos(insertPhotoMiniature,showDownloadAlert);
+
