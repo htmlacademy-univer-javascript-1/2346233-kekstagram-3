@@ -1,9 +1,10 @@
-const BACKEND_URL = 'https://27.javascript.pages.academy/kekstagram-simple/data';
-
-
-export function getPhotos (onSuccess, onError) {
-  fetch(BACKEND_URL)
-    .then((response) => response.json())
-    .then(onSuccess)
-    .catch(onError);
+export function getPhotos(success, error) {
+  fetch('https://27.javascript.pages.academy/kekstagram-simple/data')
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      }
+    })
+    .then(success)
+    .catch(error);
 }

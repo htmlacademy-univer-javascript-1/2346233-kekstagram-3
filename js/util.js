@@ -1,31 +1,26 @@
 
 
-const getRandomNumber =  (from, to) => {
-  if (from > to) {
-    throw new Error('from can not great than to');
+export function getRandom(min, max) {
+  if (min < 0 || max < 0) {
+    return('Необходимо использовать только неотрицательные числа');
   }
-  if (from === to) {
-    return to;
-  }
-  if (from >=0 && to >=0) {
-    for (let i = from; i < to, i+=1;) {
-      from = Math.ceil(from);
-      to = Math.floor(to);
-
-      const random = Math.floor(Math.random() * (to - from + 1)) + from ;
-
-      return random;
-    }
+  if (max<=min) {
+    return('Максимальная граница диапазона должна быть больше минимальной');
   } else {
-    throw new Error('negative number');
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
-};
+}
 
-
-const isStringMax = (str, maxValue) =>  str.length <= maxValue;
-
-
-export {getRandomNumber, isStringMax};
+export function getLength(str, maxLength) {
+  if (str !== String(str)) {
+    return('Вы ввели не строку!');
+  }
+  if (str.length <= maxLength) {
+    return true;
+  }
+  return false;
+}
 
 export const isEscapeKey = (evt) => evt.key === 'Escape';
 
+//Задание 7 часть 2
