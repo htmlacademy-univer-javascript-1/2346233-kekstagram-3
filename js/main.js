@@ -1,12 +1,11 @@
-import {getRandomNumber,isStringMax,getPhotos} from './util.js';
-import {MAX_PHOTOS, generatePhotos} from './data.js';
-getRandomNumber(0,3);
-isStringMax('HEllo',3);
-import './formValidator.js';
+import { getPhotos } from './data.js';
+import { showDownloadError } from './error.js';
+import { render } from './miniatures.js';
+import './form.js';
+import './validate.js';
+import './size.js';
+import './effects.js';
 
-import { insertPhotoMiniature } from './drawPhotos.js';
-// eslint-disable-next-line no-unused-vars
-const massiveOfPhotos = Array.from({length:MAX_PHOTOS}, getPhotos);
+getPhotos(render, showDownloadError);
 
-//Задание 7 часть 2
-insertPhotoMiniature(generatePhotos(25));
+
